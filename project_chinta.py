@@ -171,7 +171,7 @@ if uploaded_file is not None:
         with c2:
             st.subheader(txt['num_dist'])
             if len(num_cols) > 0:
-                selected_num = st.selectbox(f"{txt['select_col_x']} (Num)", num_cols)
+                selected_num = st.selectbox(f"{txt['select_col_y']} (Num)", num_cols)
                 fig, ax = plt.subplots(figsize=(6, 4))
                 # Warna Histogram Pink
                 sns.histplot(df[selected_num], kde=True, ax=ax, color="#ec407a")
@@ -212,4 +212,5 @@ if uploaded_file is not None:
             st.info("Need 2+ valid categorical columns.")
 
 else:
+
     st.info(txt['no_data'])
